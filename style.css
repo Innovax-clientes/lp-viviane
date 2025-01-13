@@ -549,6 +549,17 @@ header {
     color: var(--primary);
     font-weight: bold;
 }
+/* Em dispositivos móveis, usamos height: auto e object-fit: contain para exibir toda a imagem */
+@media (max-width: 768px) {
+    .course-card img {
+      height: auto;
+      object-fit: contain;
+      /* Caso queira manter o efeito de fundo, defina uma altura mínima: */
+      min-height: 200px;
+      /* Você pode definir uma cor de fundo para preencher possíveis espaços */
+      background-color: var(--card-bg);
+    }
+  }
 /* Seção Sobre a Professora */
 .about-wrapper {
     display: flex;
