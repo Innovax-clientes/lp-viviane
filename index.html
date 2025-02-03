@@ -1,440 +1,702 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProConexão Português - Visual Surpreendente</title>
 
-<head>
-    <!-- Meta Básico -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professora Viviane - Aprimore sua Escrita</title>
-
-    <!-- SEO -->
-    <meta name="description"
-        content="Aprimore suas habilidades de escrita com aulas particulares de redação. Cursos personalizados, workshops e materiais exclusivos para impulsionar sua carreira acadêmica e profissional.">
-    <meta property="og:title" content="Professora de Redação - Aprimore sua Escrita">
-    <meta property="og:description"
-        content="Aprimore suas habilidades de escrita com aulas particulares de redação. Cursos personalizados, workshops e materiais exclusivos para impulsionar sua carreira acadêmica e profissional.">
-    <meta property="og:image" content="URL_DA_IMAGEM_DE_DESTAQUE">
-    <meta property="og:url" content="URL_DA_SUA_PAGINA">
-
-    <!-- Favicon -->
-    <link rel="icon" href="imgs/favicon.png" type="image/x-icon">
-
-    <!-- CSS Libraries -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8/swiper-bundle.min.css"
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" crossorigin="anonymous"
-        referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome (removido link duplicado, mantido o com integrity) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-5h0x43z2x2lfa4nFl3bqjR+zBpJGiKP5Y7Crxrv8K+xhqMCDid0MTk9WzsaP5eQ1xBr6S6lEfwWoC4ICMFaqdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" crossorigin="anonymous"
-        referrerpolicy="no-referrer" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js" crossorigin="anonymous"
-        referrerpolicy="no-referrer" defer></script>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Particles.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js" crossorigin="anonymous"
-        referrerpolicy="no-referrer" defer></script>
-</head>
-
-<body>
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg" role="navigation" aria-label="Navegação Principal">
-    <div class="container">
-      <a class="navbar-brand" href="#home" aria-label="Página Inicial">
-        <img src="imgs/nav.png" alt="Logo da Professora de Redação" loading="lazy">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto align-items-center">
-          <li class="nav-item">
-            <a class="nav-link" href="#about">Sobre</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#services">Aulas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#youtube">YouTube</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contato</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  
-  
-    <!-- Header -->
-    <header id="home">
-        <div id="particles-js" aria-hidden="true"></div>
-        <div class="header-overlay" aria-hidden="true"></div>
-        <div class="container header-container">
-            <div class="text-content">
-                <h1>
-                    Transforme sua Escrita com <strong>Expertise em Redação</strong>
-                </h1>
-                <p>
-                    Aprimore suas habilidades com aulas personalizadas e conteúdos exclusivos para alcançar a excelência
-                    acadêmica e profissional.
-                </p>
-                <a href="#services" class="btn btn-cta" role="button" aria-label="Ir para Aulas">
-                    <i class="fas fa-book-open"></i> Comece Agora
-                </a>
-            </div>
-        </div>
-    </header>
-
-
-
-    <!-- Botão Flutuante do WhatsApp -->
-    <a href="https://wa.me/5521986877523" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
-        aria-label="Fale conosco pelo WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <main>
-        <!-- Aulas -->
-        <!-- Seção YouTube -->
-        <section id="services" aria-labelledby="aulas">
-            <div class="container py-5">
-                <div class="parent-container">
-                    <h2 id="aulas" class="section-title" data-aos="fade-up">Nossas Aulas</h2>
-                </div>
-                <div class="row mt-1 g-5 justify-content-center">
-                    <!-- Aula 2 -->
-                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card course-card h-100">
-                            <img src="imgs/curso1.png" class="card-img-top" alt="Aula de Redação Profissional"
-                                loading="lazy">
-                            <div class="card-body text-center">
-                                <span class="course-badge">Novo</span>
-                                <h5 class="card-title">Preparatório para CNU</h5>
-                                <p class="course-price">
-                                </p>
-                                <a href="https://wa.me/5521986877523" target="_blank" rel="noopener noreferrer"
-                                    class="btn btn-saiba-mais" role="button" aria-label="Saiba Mais via WhatsApp">
-                                    <i class="fas fa-info-circle me-2"></i>Saiba Mais
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Aula 3 -->
-                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                        <div class="card course-card h-100">
-                            <img src="imgs/curso2.png" class="card-img-top" alt="Workshop de Escrita Criativa"
-                                loading="lazy">
-                            <div class="card-body text-center">
-                                <span class="course-badge">Workshop</span>
-                                <h5 class="card-title">Língua Portuguesa para Concursos</h5>
-                                <p class="course-price">
-                                </p>
-                                <a href="https://wa.me/5521986877523" target="_blank" rel="noopener noreferrer"
-                                    class="btn btn-saiba-mais" role="button" aria-label="Saiba Mais via WhatsApp">
-                                    <i class="fas fa-info-circle me-2"></i>Saiba Mais
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Adicione mais aulas conforme necessário -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção Sobre a Professora -->
-        <section id="about" aria-labelledby="sobre">
-            <div class="container">
-                <div class="parent-container">
-                    <h2 id="sobre" class="section-title" data-aos="fade-up">
-                        Sobre Mim
-                    </h2>
-                </div>
-                <div class="about-wrapper">
-                    <!-- Imagem com efeito de destaque -->
-                    <div class="about-image" data-aos="fade-right" data-aos-delay="100">
-                        <div class="professor-img-container">
-                            <img src="imgs/prof.png" alt="Professora Viviane sorrindo" class="professor-img"
-                                loading="lazy">
-                        </div>
-                    </div>
-                    <!-- Conteúdo textual -->
-                    <div class="about-text" data-aos="fade-left" data-aos-delay="200">
-                        <p>
-                            Olá! Eu sou a Professora Viviane, mentora no Instagram e no YouTube (@visuprofe) e uma
-                            apaixonada pela educação. Sou especialista e mestre em Língua Portuguesa pela UFRJ e, há
-                            mais de 20 anos, venho auxiliando estudantes a dominar o português para concursos públicos e
-                            a brilharem na redação do Enem.
-                        </p>
-                        <p>
-                            Meu método exclusivo <strong>ProConexão Português</strong> tem ajudado inúmeros alunos a
-                            conquistar a tão sonhada estabilidade como servidores públicos e a ingressarem em
-                            universidades de excelência. Venha aprender com quem entende do assunto e transformar sua
-                            trajetória!
-                        </p>
-
-                        <!-- Estatísticas com efeito de zoom -->
-                        <div class="stats" data-aos="zoom-in" data-aos-delay="300">
-                            <div class="stat-card">
-                                <i class="fas fa-graduation-cap" aria-hidden="true"></i>
-                                <div class="stat-info">
-                                    <span class="stat-number" data-count="20" data-prefix="+">0</span>
-                                    <p>Anos de Experiência</p>
-                                </div>
-                            </div>
-                            <div class="stat-card">
-                                <i class="fas fa-user-friends" aria-hidden="true"></i>
-                                <div class="stat-info">
-                                    <span class="stat-number" data-count="300" data-prefix="+">0</span>
-                                    <p>Alunos Satisfeitos</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="text-center mt-4">
-                            <a href="#services" class="btn btn-primary" role="button" aria-label="Conheça minhas aulas">
-                                <i class="fas fa-paper-plane me-2" aria-hidden="true"></i>Conheça minhas Aulas
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção YouTube -->
-        <section id="youtube" aria-labelledby="youtube-section">
-            <div class="video-background">
-                <iframe width="1280" height="720"
-                    src="https://www.youtube.com/embed/orjDuGQ16so?autoplay=1&mute=1&controls=0&loop=1&playlist=orjDuGQ16so"
-                    title="Desvendando a Crase: Nunca Mais Erre na Hora de Escrever e Fazer Provas de Concursos! 🚀"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                </iframe>
-            </div>
-            <div class="overlay" aria-hidden="true"></div>
-            <div class="content" data-aos="fade-up">
-                <h2 id="youtube-section">Conheça meu Canal no YouTube</h2>
-                <p>Assista a vídeos exclusivos com dicas de redação, análises de textos e muito mais.</p>
-                <a href="https://www.youtube.com/@visuaprofe" target="_blank" rel="noopener noreferrer"
-                    class="btn btn-danger" role="button" aria-label="Visitar canal no YouTube">
-                    <i class="fas fa-play me-2" aria-hidden="true"></i>Visitar Canal
-                </a>
-            </div>
-        </section>
-
-
-        <!-- CTA -->
-        <section class="cta" aria-labelledby="call-to-action">
-            <div class="container">
-                <h2 id="call-to-action" data-aos="fade-up">Pronto para Transformar sua Escrita?</h2>
-                <p data-aos="fade-up">Inscreva-se nas minhas aulas e descubra como aprimorar sua redação para alcançar
-                    seus objetivos acadêmicos e profissionais.</p>
-                <a href="https://wa.me/5521986877523" class="btn" data-aos="zoom-in" role="button" aria-label="Inscreva-se Agora">
-                    <i class="fas fa-paper-plane" aria-hidden="true"></i>Inscreva-se Agora
-                </a>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer id="contact" aria-labelledby="contato">
-        <div class="container">
-            <p>&copy; 2025 Professora Viviane. Todos os direitos reservados.</p>
-            <p><a href="#politica-cookies">Política de Cookies</a> | <a href="#politica-privacidade">Política de
-                    Privacidade</a></p>
-            <div class="social-icons mt-3">
-                <a target="_blank" href="https://www.facebook.com/visuaprofe" aria-label="Facebook"><i
-                        class="fab fa-facebook-f"></i></a>
-                <a target="_blank" href="https://www.instagram.com/visuaprofe/" aria-label="Instagram"><i
-                        class="fab fa-instagram"></i></a>
-                <a target="_blank" href="https://www.youtube.com/@visuaprofe" aria-label="YouTube"><i
-                        class="fab fa-youtube"></i></a>
-            </div>
-            <div class="developed-by mt-4">
-                <p>
-                    <a href="https://innovaxhouse.com.br" target="_blank" rel="noopener noreferrer"
-                        aria-label="Visite o site do desenvolvedor">
-                        <span>Desenvolvido com <i class="fas fa-heart" style="color: #4A90E2;"></i> por</span>
-                        <img src="imgs/innovax.png" alt="Logo da Innovax House" loading="lazy">
-                    </a>
-                </p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"
-        crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8/swiper-bundle.min.js" crossorigin="anonymous"
-        referrerpolicy="no-referrer" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" crossorigin="anonymous"
-        referrerpolicy="no-referrer" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous"
-        referrerpolicy="no-referrer" defer></script>
+    <!-- Configurações adicionais do Tailwind -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Iniciar AOS
-            AOS.init({
-                duration: 1000,
-                once: true
-            });
-
-            // Navbar Scroll Effect
-            window.addEventListener('scroll', function () {
-                const navbar = document.querySelector('.navbar');
-                if (window.scrollY > 100) {
-                    navbar.classList.add('scrolled');
-                } else {
-                    navbar.classList.remove('scrolled');
-                }
-
-                // Mostrar/Esconder Botão Back to Top
-                const backToTopButton = document.getElementById('backToTop');
-                if (window.scrollY > 300) {
-                    backToTopButton.classList.add('show');
-                } else {
-                    backToTopButton.classList.remove('show');
-                }
-            });
-
-            // Scroll Suave para links internos
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        e.preventDefault();
-                        const offset = target.getBoundingClientRect().top + window.pageYOffset - 80;
-                        window.scrollTo({
-                            top: offset,
-                            behavior: 'smooth'
-                        });
-
-                        // Fechar o menu mobile após clicar
-                        const navbarToggler = document.querySelector('.navbar-toggler');
-                        const navbarCollapse = document.querySelector('.navbar-collapse');
-                        if (navbarCollapse.classList.contains('show')) {
-                            navbarToggler.click();
-                        }
-                    }
-                });
-            });
-
-            // Função de contagem
-            const countUp = (counter) => {
-                const target = parseInt(counter.getAttribute('data-count'), 10);
-                const prefix = counter.getAttribute('data-prefix') || '';
-                const format = counter.getAttribute('data-format');
-                let suffix = '';
-
-                let finalValue = target;
-                if (format === 'mil') {
-                    finalValue = target / 1000;
-                    suffix = ' Mil';
-                }
-
-                let current = 0;
-                const duration = 4000;
-                const startTime = performance.now();
-
-                const animate = (currentTime) => {
-                    const elapsed = currentTime - startTime;
-                    const progress = Math.min(elapsed / duration, 1);
-                    current = Math.floor(progress * finalValue);
-
-                    if (format === 'mil') {
-                        counter.innerText = prefix + current + suffix;
-                    } else {
-                        counter.innerText = prefix + current;
-                    }
-
-                    if (progress < 1) {
-                        requestAnimationFrame(animate);
-                    }
-                };
-
-                requestAnimationFrame(animate);
-            };
-
-            const statsCounters = document.querySelectorAll('.stat-number[data-count]');
-            let countersStarted = false;
-            const aboutSection = document.getElementById('about');
-
-            if ('IntersectionObserver' in window) {
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting && !countersStarted) {
-                            statsCounters.forEach(counter => countUp(counter));
-                            countersStarted = true;
-                            observer.unobserve(aboutSection);
-                        }
-                    });
-                }, { threshold: 0.3 });
-
-                observer.observe(aboutSection);
-            } else {
-                statsCounters.forEach(counter => countUp(counter));
-            }
-
-            particlesJS("particles-js", {
-                "particles": {
-                    "number": { "value": 50, "density": { "enable": true, "value_area": 800 } },
-                    "color": { "value": "#4A90E2" },
-                    "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" } },
-                    "opacity": { "value": 0.3, "random": true },
-                    "size": { "value": 3, "random": true },
-                    "line_linked": { "enable": true, "distance": 150, "color": "#4A90E2", "opacity": 0.4, "width": 1 },
-                    "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
-                },
-                "interactivity": {
-                    "detect_on": "canvas",
-                    "events": {
-                        "onhover": { "enable": true, "mode": "repulse" },
-                        "onclick": { "enable": true, "mode": "push" },
-                        "resize": true
-                    },
-                    "modes": {
-                        "repulse": { "distance": 100, "duration": 0.4 },
-                        "push": { "particles_nb": 4 }
-                    }
-                },
-                "retina_detect": true
-            });
-
-            const backToTopButton = document.getElementById('backToTop');
-            if (backToTopButton) {
-                backToTopButton.addEventListener('click', () => {
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
-                });
-            }
-
-            const navbarToggler = document.querySelector('.navbar-toggler');
-            const navbarCollapse = document.querySelector('.navbar-collapse');
-
-            if (navbarToggler) {
-                navbarToggler.addEventListener('click', () => {
-                    document.body.classList.toggle('nav-open');
-                });
-            }
-        });
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              amber: {
+                200: '#FDE68A',
+                500: '#F59E0B',
+                600: '#D97706',
+                900: '#78350F',
+              },
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            boxShadow: {
+              card: '0 10px 25px rgba(0, 0, 0, 0.1)',
+              'card-hover': '0 15px 35px rgba(0, 0, 0, 0.15)',
+            },
+          },
+        },
+      }
     </script>
 
-</body>
+    <!-- CSS customizado -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+      }
 
+      /* Animação de entrada */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fade-in-up {
+        animation: fadeInUp 1s ease-out forwards;
+      }
+
+      /* Animação do gradiente dinâmico no Hero */
+      @keyframes gradientShift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      .animated-gradient {
+        background: linear-gradient(135deg, rgba(120, 53, 15, 0.85), rgba(183, 153, 0, 0.75), transparent);
+        background-size: 200% 200%;
+        animation: gradientShift 10s ease infinite;
+      }
+
+      /* Animação para flutuação da imagem do About */
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+
+      /* Animação de entrada com bounce para o CTA */
+      @keyframes bounceIn {
+        0% {
+          transform: scale(0.9);
+          opacity: 0;
+        }
+        50% {
+          transform: scale(1.05);
+          opacity: 0.5;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      .animate-bounce-in {
+        animation: bounceIn 1s ease-out forwards;
+      }
+    </style>
+  </head>
+
+  <body class="min-h-screen bg-gray-50">
+    <!-- Hero Section -->
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+      <!-- Vídeo de fundo -->
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute w-full h-full object-cover"
+        style="filter: brightness(0.6);"
+      >
+        <source
+          src="https://cdn.coverr.co/videos/coverr-person-writing-on-a-notebook-5244/1080p.mp4"
+          type="video/mp4"
+        />
+        Seu navegador não suporta o vídeo.
+      </video>
+
+      <!-- Overlay de gradiente animado -->
+      <div class="absolute inset-0 animated-gradient"></div>
+
+      <!-- Conteúdo principal do Hero -->
+      <div class="relative z-10 container mx-auto px-4 text-center">
+        <div class="animate-fade-in-up">
+          <span
+            class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-amber-200 text-amber-900 mb-8"
+          >
+            <!-- Ícone Star (SVG inline) -->
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M9.049 2.927C9.369 2.1 10.631 2.1 10.951 2.927l1.16 3.6a1 1 0 00.95.69h3.788c.969 0 1.371 1.24.588 1.81l-3.064 2.22a1 1 0 00-.364 1.118l1.16 3.6c.32.827-.755 1.524-1.54.946l-3.064-2.22a1 1 0 00-1.176 0l-3.064 2.22c-.784.578-1.86-.119-1.54-.946l1.16-3.6a1 1 0 00-.364-1.118L2.72 9.127c-.783-.57-.38-1.81.588-1.81h3.788a1 1 0 00.95-.69l1.16-3.6z"
+              />
+            </svg>
+            Método Exclusivo ProConexão Português
+          </span>
+          <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight text-white">
+            Domine a Arte da
+            <span
+              class="block mt-2 bg-gradient-to-r from-amber-200 to-amber-400 bg-clip-text text-transparent"
+            >
+              Redação Profissional
+            </span>
+          </h1>
+          <p class="text-xl md:text-2xl mb-12 max-w-2xl mx-auto text-amber-100/90">
+            Desenvolva suas habilidades de escrita com metodologia comprovada e alcance a excelência em concursos públicos.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <button
+              class="group bg-gradient-to-r from-amber-500 to-amber-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:shadow-[0_0_30px_rgba(251,191,36,0.3)] hover:scale-105 flex items-center gap-2"
+            >
+              <!-- Ícone BookOpen -->
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 20l9-5-9-5-9 5 9 5z"
+                />
+              </svg>
+              Comece Agora
+              <!-- Ícone ChevronRight -->
+              <svg
+                class="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+            <a
+              href="#about"
+              class="text-amber-200 hover:text-amber-300 transition-colors flex items-center gap-2"
+            >
+              Saiba mais
+              <!-- Ícone ArrowRight -->
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 5l7 7-7 7"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Bar -->
+      <div class="absolute bottom-0 left-0 right-0 bg-black/60 backdrop-blur-md py-6 border-t border-gray-700">
+        <div class="container mx-auto px-4">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="text-center">
+              <div class="text-3xl font-bold text-amber-400">20+</div>
+              <div class="text-sm text-gray-300">Anos de Experiência</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-amber-400">300+</div>
+              <div class="text-sm text-gray-300">Alunos Aprovados</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-amber-400">98%</div>
+              <div class="text-sm text-gray-300">Taxa de Satisfação</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-amber-400">50+</div>
+              <div class="text-sm text-gray-300">Cursos Ministrados</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Services Section (Cursos) -->
+    <section class="py-24 bg-gradient-to-b from-white to-amber-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-amber-600 font-medium mb-4 block">Nossos Cursos</span>
+          <h2 class="text-4xl font-bold mb-6 text-amber-900">
+            Programas Especializados para Sua Evolução
+          </h2>
+          <p class="text-gray-600">
+            Escolha o programa que melhor se adapta aos seus objetivos e comece sua jornada rumo ao sucesso.
+          </p>
+        </div>
+        <div class="grid md:grid-cols=2 lg:grid-cols-3 gap-8">
+          <!-- Course Card 1 -->
+          <div
+            class="group bg-white rounded-2xl shadow-card overflow-hidden transition transform hover:scale-105 hover:shadow-card-hover"
+          >
+            <div class="relative h-64 overflow-hidden">
+              <img
+                src="imgs/curso1.png"
+                alt="Curso 1"
+                class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+              />
+              <!-- Overlay gradiente que aparece no hover -->
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-75 transition-opacity duration-500"
+              ></div>
+              <div class="absolute top-4 left-4">
+                <span
+                  class="px-3 py-1 bg-amber-600 text-white rounded-full text-sm font-medium"
+                  >Novo</span
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-3 text-amber-900">
+                Preparatório para CNU
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Prepare-se para o Concurso Nacional Unificado com metodologia comprovada e material exclusivo.
+              </p>
+              <ul class="space-y-2 mb-6 text-gray-700 text-sm">
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="w-5 h-5 text-amber-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M9.049 2.927C9.369 2.1 10.631 2.1 10.951 2.927l1.16 3.6a1 1 0 00.95.69h3.788c.969 0 1.371 1.24.588 1.81l-3.064 2.22a1 1 0 00-.364 1.118l1.16 3.6c.32.827-.755 1.524-1.54.946l-3.064-2.22a1 1 0 00-1.176 0l-3.064 2.22c-.784.578-1.86-.119-1.54-.946l1.16-3.6a1 1 0 00-.364-1.118L2.72 9.127c-.783-.57-.38-1.81.588-1.81h3.788a1 1 0 00.95-.69l1.16-3.6z"
+                    ></path>
+                  </svg>
+                  Material Atualizado
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="w-5 h-5 text-amber-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M13 7a3 3 0 11-6 0 3 3 0 016 0zM6 12a4 4 0 00-4 4v1h8v-1a4 4 0 00-4-4zm7-1a3 3 0 00-3 3v1h6v-1a3 3 0 00-3-3z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Turmas Reduzidas
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="w-5 h-5 text-amber-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M9.049 2.927C9.369 2.1 10.631 2.1 10.951 2.927l1.16 3.6a1 1 0 00.95.69h3.788c.969 0 1.371 1.24.588 1.81l-3.064 2.22a1 1 0 00-.364 1.118l1.16 3.6c.32.827-.755 1.524-1.54.946l-3.064-2.22a1 1 0 00-1.176 0l-3.064 2.22c-.784.578-1.86-.119-1.54-.946l1.16-3.6a1 1 0 00-.364-1.118L2.72 9.127c-.783-.57-.38-1.81.588-1.81h3.788a1 1 0 00.95-.69l1.16-3.6z"
+                    ></path>
+                  </svg>
+                  Certificado Incluso
+                </li>
+              </ul>
+              <!-- Botão "Saiba mais" com mesmo estilo de gradiente -->
+              <a
+                href="https://wa.me/5521986877523"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group bg-gradient-to-r from-amber-500 to-amber-600
+                       text-white px-8 py-4 rounded-full text-lg font-semibold
+                       transition-all duration-300 hover:shadow-[0_0_30px_rgba(251,191,36,0.3)]
+                       hover:scale-105 flex items-center gap-2"
+              >
+                <span>Saiba mais</span>
+                <svg
+                  class="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Course Card 2 -->
+          <div
+            class="group bg-white rounded-2xl shadow-card overflow-hidden transition transform hover:scale-105 hover:shadow-card-hover"
+          >
+            <div class="relative h-64 overflow-hidden">
+              <img
+                src="imgs/curso2.png"
+                alt="Curso 2"
+                class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-75 transition-opacity duration-500"
+              ></div>
+              <div class="absolute top-4 left-4">
+                <span
+                  class="px-3 py-1 bg-amber-600 text-white rounded-full text-sm font-medium"
+                  >Popular</span
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-3 text-amber-900">
+                Português para Concursos
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Domine a língua portuguesa e aumente suas chances de aprovação em qualquer concurso.
+              </p>
+              <ul class="space-y-2 mb-6 text-gray-700 text-sm">
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="w-5 h-5 text-amber-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M9.049 2.927C9.369 2.1 10.631 2.1 10.951 2.927l1.16 3.6a1 1 0 00.95.69h3.788c.969 0 1.371 1.24.588 1.81l-3.064 2.22a1 1 0 00-.364 1.118l1.16 3.6c.32.827-.755 1.524-1.54.946l-3.064-2.22a1 1 0 00-1.176 0l-3.064 2.22c-.784.578-1.86-.119-1.54-.946l1.16-3.6a1 1 0 00-.364-1.118L2.72 9.127c-.783-.57-.38-1.81.588-1.81h3.788a1 1 0 00.95-.69l1.16-3.6z"
+                    ></path>
+                  </svg>
+                  Aulas ao Vivo
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="w-5 h-5 text-amber-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M13 7a3 3 0 11-6 0 3 3 0 016 0zM6 12a4 4 0 00-4 4v1h8v-1a4 4 0 00-4-4zm7-1a3 3 0 00-3 3v1h6v-1a3 3 0 00-3-3z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Exercícios Práticos
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="w-5 h-5 text-amber-500"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M9.049 2.927C9.369 2.1 10.631 2.1 10.951 2.927l1.16 3.6a1 1 0 00.95.69h3.788c.969 0 1.371 1.24.588 1.81l-3.064 2.22a1 1 0 00-.364 1.118l1.16 3.6c.32.827-.755 1.524-1.54.946l-3.064-2.22a1 1 0 00-1.176 0l-3.064 2.22c-.784.578-1.86-.119-1.54-.946l1.16-3.6a1 1 0 00-.364-1.118L2.72 9.127c-.783-.57-.38-1.81.588-1.81h3.788a1 1 0 00.95-.69l1.16-3.6z"
+                    ></path>
+                  </svg>
+                  Simulados Semanais
+                </li>
+              </ul>
+              <!-- Botão "Saiba mais" com mesmo estilo de gradiente -->
+              <a
+                href="https://wa.me/5521986877523"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group bg-gradient-to-r from-amber-500 to-amber-600
+                       text-white px-8 py-4 rounded-full text-lg font-semibold
+                       transition-all duration-300 hover:shadow-[0_0_30px_rgba(251,191,36,0.3)]
+                       hover:scale-105 flex items-center gap-2"
+              >
+                <span>Saiba mais</span>
+                <svg
+                  class="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 5l7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bloco: Conheça mais sobre o trabalho na ProTec -->
+    <section class="py-24 bg-gradient-to-r from-amber-500 to-amber-600 text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-6">
+          Conheça mais sobre meu trabalho na ProTec
+        </h2>
+        <p class="text-xl mb-8 text-amber-100">
+          Descubra como a ProTec está revolucionando a educação e transformando vidas.
+        </p>
+        <!-- Botão "Saiba Mais" agora com mesmo gradiente -->
+        <a
+          href="protec.html"
+          class="group bg-gradient-to-r from-amber-500 to-amber-600
+                 text-white px-8 py-4 rounded-full text-lg font-semibold
+                 transition-all duration-300 hover:shadow-[0_0_30px_rgba(251,191,36,0.3)]
+                 hover:scale-105 inline-block"
+        >
+          Saiba Mais
+        </a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-amber-50">
+      <div class="container mx-auto px-4">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="relative">
+            <div class="relative z-10">
+              <img
+                src="imgs/965443c9-8419-4305-9574-0261c6a9ff92.jpg"
+                alt="Professora Viviane"
+                class="rounded-2xl shadow-2xl animate-float"
+              />
+            </div>
+            <!-- Card sobre o método -->
+            <div class="absolute -bottom-8 -right-8 bg-white p-8 rounded-2xl shadow-xl z-20">
+              <div class="text-amber-900 font-bold text-lg">
+                ProConexão Português
+              </div>
+              <div class="text-amber-700">Método Exclusivo</div>
+            </div>
+            <div class="absolute -z-10 top-8 -left-8 w-full h-full bg-amber-200 rounded-2xl"></div>
+          </div>
+          <div>
+            <span class="text-amber-600 font-medium mb-4 block">Sobre Mim</span>
+            <h2 class="text-4xl font-bold mb-6 text-amber-900">
+              Experiência e Dedicação no Ensino de Português
+            </h2>
+            <p class="text-lg text-gray-700 mb-8">
+              Olá! Eu sou a Professora Viviane, mentora no Instagram e no YouTube (@visuprofe) e
+              uma apaixonada pela educação. Sou especialista e mestre em Língua Portuguesa pela UFRJ
+              e, há mais de 20 anos, venho auxiliando estudantes a dominar o português para concursos
+              públicos e a brilharem na redação do Enem.
+            </p>
+            <div class="grid sm:grid-cols-2 gap-6 mb-8">
+              <div
+                class="bg-white p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+              >
+                <div class="text-3xl font-bold text-amber-600 mb-2">20+</div>
+                <div class="text-gray-600">Anos de Experiência</div>
+              </div>
+              <div
+                class="bg-white p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+              >
+                <div class="text-3xl font-bold text-amber-600 mb-2">300+</div>
+                <div class="text-gray-600">Alunos Satisfeitos</div>
+              </div>
+            </div>
+            <!-- Link “Fale comigo” -->
+            <a
+              href="https://wa.me/5521986877523"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group bg-gradient-to-r from-amber-500 to-amber-600
+                     text-white px-8 py-4 rounded-full text-lg font-semibold
+                     transition-all duration-300 hover:shadow-[0_0_30px_rgba(251,191,36,0.3)]
+                     hover:scale-105 flex items-center gap-2"
+            >
+              <span>Fale comigo</span>
+              <svg
+                class="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 5l7 7-7 7"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section
+      class="py-24 bg-gradient-to-br from-amber-900 to-amber-800 relative overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 bg-[url(imgs/backgrounds/fundo.png)] opacity-10 bg-cover bg-center"
+      ></div>
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white animate-bounce-in">
+            Pronto para Transformar sua Escrita?
+          </h2>
+          <p class="text-xl mb-12 text-amber-100">
+            Inscreva-se nas minhas aulas e descubra como aprimorar sua redação para alcançar seus objetivos.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <!-- Botão 1: Comece sua Jornada -->
+            <a
+              href="https://wa.me/5521986877523"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group bg-white text-amber-900 px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 hover:bg-amber-100 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] flex items-center gap-2"
+            >
+              <span>Comece sua Jornada</span>
+              <svg
+                class="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 5l7 7-7 7"
+                />
+              </svg>
+            </a>
+
+            <!-- Botão 2: Fale Comigo -->
+            <a
+              href="https://wa.me/5521986877523"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group border-2 border-white text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 hover:bg-white/10 flex items-center gap-2"
+            >
+              <span>Fale Comigo</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h12a2 2 0 012 2v10z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      id="contato"
+      aria-labelledby="contato"
+      class="bg-gradient-to-br from-amber-900 to-amber-800 text-white py-10 mt-16"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <!-- Texto de direitos autorais -->
+        <p class="mb-2">
+          &copy; 2025 Professora Viviane. Todos os direitos reservados.
+        </p>
+
+        <!-- Links de políticas -->
+        <p class="mb-4">
+          <a href="#politica-cookies" class="hover:text-amber-200 transition-colors">
+            Política de Cookies
+          </a>
+          <span class="mx-2">|</span>
+          <a href="#politica-privacidade" class="hover:text-amber-200 transition-colors">
+            Política de Privacidade
+          </a>
+        </p>
+
+        <!-- Ícones de redes sociais -->
+        <div class="mt-4 flex justify-center space-x-6 text-2xl">
+          <a
+            target="_blank"
+            href="https://www.facebook.com/visuaprofe"
+            aria-label="Facebook"
+            class="hover:text-amber-200 transition-colors"
+          >
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a
+            target="_blank"
+            href="https://www.instagram.com/visuaprofe/"
+            aria-label="Instagram"
+            class="hover:text-amber-200 transition-colors"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a
+            target="_blank"
+            href="https://www.youtube.com/@visuaprofe"
+            aria-label="YouTube"
+            class="hover:text-amber-200 transition-colors"
+          >
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+
+        <!-- Créditos de desenvolvimento -->
+        <div class="developed-by mt-6">
+          <a
+            href="https://innovaxhouse.com.br"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visite o site do desenvolvedor"
+            class="inline-flex items-center space-x-2 hover:text-amber-200 transition-colors"
+          >
+            <span>Desenvolvido com</span>
+            <i class="fas fa-heart text-red-500"></i>
+            <span>por</span>
+            <img
+              src="imgs/innovax.png"
+              alt="Logo da Innovax House"
+              loading="lazy"
+              class="h-6"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Botão flutuante do WhatsApp -->
+    <a
+      href="https://wa.me/5521986877523"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="fixed bottom-8 right-8 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 hover:scale-110 hover:shadow-xl z-50"
+    >
+      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+        <path
+          d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
+        />
+      </svg>
+    </a>
+  </body>
 </html>

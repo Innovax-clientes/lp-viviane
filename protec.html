@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProTec Lagos</title>
+
+    <!-- Importa o Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Importa Font Awesome (necessário para os ícones das redes sociais) -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    ...
+  />
+  
+
+    <!-- CSS customizado -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+      .animate-fade-in {
+        animation: fadeIn 0.6s ease-out forwards;
+      }
+      .animate-fade-in-delay-1 {
+        animation: fadeIn 0.6s ease-out 0.2s forwards;
+        opacity: 0;
+      }
+      .animate-fade-in-delay-2 {
+        animation: fadeIn 0.6s ease-out 0.4s forwards;
+        opacity: 0;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      /* Efeito sublinhado para os links do menu */
+      .nav-link {
+        position: relative;
+      }
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: currentColor;
+        transition: width 0.3s ease;
+      }
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      /* Personalização do footer (usando variáveis como exemplo, se desejar) */
+      :root {
+        /* Você pode ajustar essas variáveis conforme sua preferência de cor */
+        --footer-bg: #1F2937; /* Exemplo: bg-slate-800 */
+        --primary: #3B82F6;   /* Exemplo: azul do Tailwind */
+        --accent: #14B8A6;    /* Exemplo: teal */
+        --transition-speed: 0.3s;
+      }
+
+      footer {
+        background: var(--footer-bg);
+        padding: 50px 20px;
+        text-align: center;
+        color: #FFFFFF;
+        position: relative;
+        overflow: hidden;
+      }
+
+      footer::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 200px;
+        height: 200px;
+        background: radial-gradient(var(--primary), transparent);
+        transform: translate(-50%, -50%);
+        filter: blur(80px);
+        opacity: 0.05;
+        z-index: 0;
+      }
+
+      footer p {
+        margin: 10px 0;
+        position: relative;
+        z-index: 1;
+      }
+
+      footer a {
+        color: var(--accent);
+        position: relative;
+        z-index: 1;
+        transition: color var(--transition-speed);
+      }
+
+      footer a:hover {
+        color: var(--primary);
+        text-shadow: 0 0 5px var(--primary);
+      }
+
+      .social-icons a {
+        color: #FFFFFF;
+        margin: 0 10px;
+        font-size: 1.5rem;
+        transition: transform 0.3s ease, color var(--transition-speed);
+        position: relative;
+        z-index: 1;
+      }
+
+      .social-icons a:hover {
+        color: var(--primary);
+        transform: translateY(-3px) scale(1.1);
+      }
+
+      .developed-by {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 0.9rem;
+        color: #aaa;
+      }
+
+      .developed-by a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .developed-by a span {
+        margin-right: 5px;
+      }
+
+      .developed-by img {
+        height: 30px;
+        transition: transform 0.3s ease;
+      }
+
+      .developed-by a:hover img,
+      .developed-by a:focus img {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body class="bg-gradient-to-br from-slate-50 to-slate-100">
+    <!-- Header -->
+    <header class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-lg">
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <div class="flex items-center space-x-2 text-indigo-600 font-bold text-xl">
+          <!-- Ícone -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-7 w-7 transform transition-transform hover:rotate-12"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 14l9-5-9-5-9 5 9 5z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 14l6.16-3.422A12.083 12.083 0 0112 21.5a12.083 12.083 0 01-6.16-10.922L12 14z" />
+          </svg>
+          <span class="bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">
+            ProTec Lagos
+          </span>
+        </div>
+        <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+          <a href="#sobre" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors">Sobre</a>
+          <a href="#beneficios" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors">Benefícios</a>
+          <a href="#metodologia" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors">Metodologia</a>
+          <a href="#equipe" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors">Equipe</a>
+          <a href="#contato" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors">Contato</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-16">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-gradient-to-r from-indigo-600/95 to-blue-600/95"></div>
+        <img
+          src="https://images.unsplash.com/photo-1607731169996-66860b2f2d9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+          alt="Students studying"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+        <h1 class="animate-fade-in text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100">
+          ProTec Lagos
+        </h1>
+        <p class="animate-fade-in-delay-1 text-2xl md:text-3xl mb-4 text-blue-100 font-light">
+          Seu Passaporte para o IFF e FAETECs
+        </p>
+        <p class="animate-fade-in-delay-2 text-xl mb-8 text-blue-200/90">
+          A melhor preparação para as escolas técnicas da Região dos Lagos
+        </p>
+        <a
+          href="#cta1"
+          class="group inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-teal-500 to-emerald-500 rounded-full transition-all duration-300 hover:shadow-[0_0_30px_rgba(20,184,166,0.3)] hover:scale-105"
+        >
+          <span>Garanta sua vaga</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+      <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-50 to-transparent"></div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="beneficios" class="py-32 bg-white relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-b from-slate-50/50 to-white/0"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="text-center mb-20">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Por que escolher o ProTec?</h2>
+          <div class="w-24 h-1.5 bg-gradient-to-r from-teal-500 to-emerald-500 mx-auto rounded-full"></div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Benefit Card 1 -->
+          <div class="bg-white rounded-2xl p-8 shadow hover:shadow-lg transition">
+            <div class="text-teal-500 mb-6">
+              <!-- Ícone Target -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-12 w-12"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <circle cx="12" cy="12" r="10" stroke-width="2" />
+                <circle cx="12" cy="12" r="3" stroke-width="2" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Foco Total</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Conteúdo 100% direcionado para os exames do IFF e FAETECs.
+            </p>
+          </div>
+          <!-- Benefit Card 2 -->
+          <div class="bg-white rounded-2xl p-8 shadow hover:shadow-lg transition">
+            <div class="text-teal-500 mb-6">
+              <!-- Ícone TrendingUp -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-12 w-12"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 17l6-6 4 4 8-8" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Resultados Comprovados</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Taxa de aprovação 3x acima da média regional.
+            </p>
+          </div>
+          <!-- Benefit Card 3 -->
+          <div class="bg-white rounded-2xl p-8 shadow hover:shadow-lg transition">
+            <div class="text-teal-500 mb-6">
+              <!-- Ícone UserCheck -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-12 w-12"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Professores Especialistas</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Equipe com experiência em preparatórios técnicos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section id="metodologia" class="py-32 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-indigo-600 to-blue-600"></div>
+      <div
+        class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.2)_0%,transparent_100%)]"
+      ></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="text-center mb-20">
+          <h2 class="text-4xl font-bold text-white mb-4">Metodologia "DP"</h2>
+          <div class="w-24 h-1.5 bg-gradient-to-r from-teal-400 to-emerald-400 mx-auto rounded-full"></div>
+        </div>
+        <div class="glass-card rounded-2xl p-10 shadow-xl">
+          <p class="text-lg leading-relaxed mb-6 text-white/90">
+            Nossa metodologia "DP" (Direto ao Ponto) é o que diferencia o ProTec Lagos dos demais
+            cursinhos. Aqui, cada aula, cada exercício e cada simulado são planejados para desenvolver
+            as exatas competências exigidas nas provas do IFF e FAETECs.
+          </p>
+          <p class="text-lg leading-relaxed text-white/90">
+            Essa combinação de praticidade e aprofundamento faz com que nossos alunos conquistem resultados
+            expressivos, garantindo um futuro de sucesso em instituições reconhecidas pela qualidade de ensino.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="equipe" class="py-32 bg-white relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-b from-slate-50/50 to-white/0"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="text-center mb-20">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Nossa Equipe</h2>
+          <div class="w-24 h-1.5 bg-gradient-to-r from-teal-500 to-emerald-500 mx-auto rounded-full"></div>
+        </div>
+        <div class="flex flex-col md:flex-row items-center gap-16">
+          <div class="w-72 h-72 rounded-full overflow-hidden shadow-2xl ring-4 ring-indigo-100 animate-float">
+            <img
+              src="imgs/965443c9-8419-4305-9574-0261c6a9ff92.jpg"
+              alt="Professora Viviane"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="flex-1">
+            <h3 class="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent mb-6">
+              Profª Viviane
+            </h3>
+            <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+              Especialista e mestre em Língua Portuguesa pela UFRJ, com mais de 20 anos de experiência
+              auxiliando estudantes a dominar o português para concursos públicos e a brilharem na redação do
+              Enem.
+            </p>
+            <p class="text-gray-600 leading-relaxed text-lg">
+              Meu método exclusivo <strong>ProConexão Português</strong> tem ajudado inúmeros alunos a conquistar a
+              tão sonhada aprovação. Venha aprender com quem entende do assunto!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta1" class="py-32 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-teal-500 to-emerald-500"></div>
+      <div
+        class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_70%_50%,rgba(255,255,255,0.2)_0%,transparent_100%)]"
+      ></div>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+        <h3 class="text-4xl font-bold text-white mb-6">Transforme seu futuro agora!</h3>
+        <p class="text-xl mb-8 text-white/90">Turmas limitadas com início imediato</p>
+        <a
+          href="#contato"
+          class="group inline-flex items-center px-8 py-4 text-lg font-semibold text-teal-600 bg-white rounded-full transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:scale-105"
+        >
+          <span>Inscreva-se Hoje</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer corrigido -->
+    <footer id="contato" aria-labelledby="contato">
+      <!-- 
+        Substituímos a classe .container por classes do Tailwind:
+        max-w-7xl  => define a largura máxima
+        mx-auto    => centraliza horizontalmente
+        px-4 etc.  => espaçamento interno 
+      -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <p>&copy; 2025 Professora Viviane. Todos os direitos reservados.</p>
+        <p>
+          <a href="#politica-cookies">Política de Cookies</a> | 
+          <a href="#politica-privacidade">Política de Privacidade</a>
+        </p>
+
+        <div class="social-icons mt-3">
+          <a
+            target="_blank"
+            href="https://www.facebook.com/visuaprofe"
+            aria-label="Facebook"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a
+            target="_blank"
+            href="https://www.instagram.com/visuaprofe/"
+            aria-label="Instagram"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            target="_blank"
+            href="https://www.youtube.com/@visuaprofe"
+            aria-label="YouTube"
+          >
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+
+        <div class="developed-by mt-4">
+          <p>
+            <a
+              href="https://innovaxhouse.com.br"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visite o site do desenvolvedor"
+            >
+              <span>Desenvolvido com <i class="fas fa-heart" style="color: #4A90E2;"></i> por</span>
+              <img src="imgs/innovax.png" alt="Logo da Innovax House" loading="lazy">
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Botão "Scroll to Top" -->
+    <a
+      href="#"
+      class="fixed right-8 bottom-8 p-3 bg-white rounded-full shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-110"
+    >
+      <!-- Ícone ChevronUp -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6 text-gray-600"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M5 15l7-7 7 7" />
+      </svg>
+    </a>
+  </body>
+</html>
